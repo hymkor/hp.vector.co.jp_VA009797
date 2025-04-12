@@ -13,7 +13,7 @@ function mirror($src,$dst){
             mirror ($_.FullName) $newname
         } else {
             if ($name -match '\.html?$') {
-                nkf32 -J -w8 $_.FullName > $newname
+                nkf32 -w8 $_.FullName > $newname
             } else {
                 Copy-Item $_.FullName $newname -Force
             }
